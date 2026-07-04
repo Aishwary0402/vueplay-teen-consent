@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VuePlay — Teen Consent Prototype (DPDP Case Study)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand-mark">
+      <div class="dot">V</div>
+      <div>
+        <div class="name">VuePlay</div>
+        <div class="tag">Teen consent & data prototype — DPDP case study</div>
+      </div>
+    </div>
+    <div class="meta mono">Case study for Vedantu PM Internship<br>Focus: DPDP Act, 2023 — teen accounts & consent</div>
+  </div>
+
+  <div class="stage">
+    <!-- STEP RAIL -->
+    <div class="rail" id="rail"></div>
+
+
+    <!-- PHONE -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen" id="screen"></div>
+
+        <button class="ask-fab" onclick="openAsk()" title="Ask Compliance">✨</button>
+
+        <div class="ask-panel hidden" id="askPanel">
+          <div class="ask-sheet">
+            <div class="ask-head">
+              <div>
+                <div class="t1">DPDP Compliance Copilot</div>
+                <div class="t2">RAG over the Act &amp; Rules · internal PM tool, not user-facing</div>
+              </div>
+              <button class="ask-close" onclick="closeAsk()">✕</button>
+            </div>
+            <div class="ask-body" id="askBody">
+              <div class="msg bot">
+                <div class="bubble">Ask me anything about how a proposed feature holds up against the DPDP Act — I'll retrieve the relevant provisions first, then answer grounded in them.</div>
+              </div>
+              <div class="chip-row" id="askChips"></div>
+            </div>
+            <div class="ask-input-row">
+              <input id="askInput" type="text" placeholder="e.g. Can we show personalised ads to a 16-year-old?" onkeydown="if(event.key==='Enter') sendAsk()">
+              <button class="ask-send" id="askSendBtn" onclick="sendAsk()">Ask</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-hint">Click through the flow inside the screen ↑</div>
+    </div>
+
+    <!-- CONSENT LEDGER -->
+    <div class="ledger-wrap">
+      <div class="ledger">
+        <h3>Consent ledger</h3>
+        <div class="sub">Live, auditable log of every consent event — this is the artifact DPDP requires fiduciaries to be able to produce.</div>
+        <div id="ledgerList"><div class="ledger-empty">No events yet. Start the flow →</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">Built to demonstrate the proposed consent & contextual-recommendation flow for the accompanying Product Thinking Deck.</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
