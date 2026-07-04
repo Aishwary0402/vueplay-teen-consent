@@ -33,7 +33,7 @@ npx serve .
 python3 -m http.server 8000
 ```
 
-## What's actually implemented (not just mocked)
+## What's actually implemented 
 
 1. **Full consent flow** — sign-up → age declaration → minor detection →
    parental verification (DigiLocker-style) → itemised granular consent →
@@ -58,7 +58,7 @@ python3 -m http.server 8000
    auditable log entry (the artifact DPDP requires fiduciaries be able to
    produce).
 
-## Setting up real Google Sign-In (optional but recommended)
+## Setting up real Google Sign-In 
 
 The "Continue with Google" button is wired to real Google Identity Services.
 Without setup it gracefully falls back to a mock identity, so the demo
@@ -79,22 +79,6 @@ never breaks — but real sign-in takes about 5 minutes:
    and paste your real Client ID in.
 7. Redeploy. Clicking "Continue with Google" now opens a real Google
    account picker and pulls your real name/email into the flow.
-
-## Deploying with GitHub Pages (simple, and what you'll submit)
-
-1. Create a new GitHub repo (public), e.g. `vueplay-dpdp-prototype`.
-2. Upload `index.html`, `style.css`, `script.js` to the repo root (drag-and-drop
-   on github.com works fine, no git CLI needed).
-3. Go to the repo's **Settings → Pages**.
-4. Under "Build and deployment," set **Source: Deploy from a branch**,
-   branch: `main`, folder: `/ (root)` → **Save**.
-5. Wait ~1 minute, then your link will be live at:
-   `https://YOUR-GITHUB-USERNAME.github.io/vueplay-dpdp-prototype/`
-6. If you set up Google Sign-In, go back and add that exact URL to your
-   OAuth client's Authorized JavaScript origins (step 4 above), or the
-   Google button will silently fall back to the mock identity.
-
-That URL is what you submit as your clickable prototype link.
 
 ## Talking points for the discussion round
 
