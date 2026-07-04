@@ -1,22 +1,20 @@
 # VuePlay — DPDP Teen Consent Prototype
 
-Clickable prototype for the Vedantu PM case study: how a YouTube-style video
+Clickable prototype case study: How a YouTube-style video
 platform should handle consent and data for under-18 users under India's
 DPDP Act, 2023.
 
-> Note on branding: this is an original concept product ("VuePlay"), not a
-> literal YouTube clone. It's styled to evoke a familiar video-platform UI
-> (dark app chrome, red primary accent, video-grid feed) so it reads
-> instantly as "a YouTube-like app" — without reproducing YouTube's actual
-> logo, wordmark, or trademarked UI, which keeps the submission clean of any
-> IP concerns while still making the case study obvious.
+> Note on branding: This is an original concept product ("VuePlay"), not a
+> literal YouTube clone. It's styled to evoke a familiar so it reads
+> instantly as "a YouTube-like app"  without reproducing YouTube's actual
+> logo, wordmark, or trademarked UI
 
 ## Files
 
 ```
 vueplay-prototype/
-├── index.html   → structure only, no inline styles/scripts
-├── style.css    → design system (CSS variables) + all component styles
+├── index.html   → structure only
+├── style.css    → design system 
 ├── script.js    → app state, screen renderer, recommendation engine,
 │                  and the "Ask Compliance" RAG copilot
 └── README.md    → this file
