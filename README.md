@@ -79,12 +79,3 @@ never breaks — but real sign-in takes about 5 minutes:
    and paste your real Client ID in.
 7. Redeploy. Clicking "Continue with Google" now opens a real Google
    account picker and pulls your real name/email into the flow.
-
-## Talking points for the discussion round
-
-- Why content-based filtering satisfies "personalised recommendations"
-  without violating DPDP Section 9's ban on behavioural profiling of minors.
-- Why retrieval here is keyword-based, and what you'd change for production.
-- Why the app chrome is dark (matches user expectation of a video platform)
-  but consent/legal screens stay light (legibility and trust cues matter
-  more than brand consistency in a compliance-critical flow).
